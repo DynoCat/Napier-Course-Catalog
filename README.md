@@ -1,4 +1,4 @@
-# Flask Docker Boilerplate
+# Napier Course Catalog
 
 ## Usage
 
