@@ -6,6 +6,7 @@
 		<span>{{ location.id }}</span>
 		<span>{{ location.name }}</span>
 		<span>{{ location.description }}</span>
+		<a href="/admin/locations/{{ location.name }}">Edit</a>
 	</div>
 {% endfor %}
 <a href="/admin/locations/new">New location</a>
