@@ -22,6 +22,7 @@ from views.api import *
 from views.templates import *
 
 from auth import views
+from admin import views
 
 @app.cli.command()
 def initdb():
