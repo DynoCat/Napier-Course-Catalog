@@ -1,0 +1,11 @@
+{% extends 'admin/base.html' %}
+
+{% block admin_body %}
+{% for location in locations %}
+    <div class="admin-location-page-summary-element" >
+        <span>{{ location.id }}</span>
+        <span>{{ location.name }}</span>
+        <span>{{ location.description }}</span>
+    </div>
+{% endfor %}
+{% endblock %}
