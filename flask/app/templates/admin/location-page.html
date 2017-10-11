@@ -2,10 +2,11 @@
 
 {% block admin_body %}
 {% for location in locations %}
-    <div class="admin-location-page-summary-element" >
-        <span>{{ location.id }}</span>
-        <span>{{ location.name }}</span>
-        <span>{{ location.description }}</span>
-    </div>
+	<div class="admin-location-page-summary-element" >
+		<span>{{ location.id }}</span>
+		<span>{{ location.name }}</span>
+		<span>{{ location.description }}</span>
+	</div>
 {% endfor %}
+<a href="/admin/locations/new">New location</a>
 {% endblock %}

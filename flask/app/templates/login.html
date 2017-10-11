@@ -1,15 +1,3 @@
-{% macro render_field(field, label_visible=true) -%}
-
-<div class="form-group {% if field.errors %}has-error{% endif %} {{ kwargs.pop('class_', '') }}">
-	{{ field(class_='form-control', **kwargs) }}
-	{% if field.errors %}
-	{% for e in field.errors %}
-	<p class="help-block">{{ e }}</p>
-	{% endfor %}
-	{% endif %}
-</div>
-{%- endmacro %}
-
 {% extends 'base.html' %}
 
 {% block title %}Login{% endblock %}
