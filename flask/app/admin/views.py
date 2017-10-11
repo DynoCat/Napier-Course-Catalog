@@ -34,7 +34,8 @@ def admin_locations_new():
         db.session.commit()
         return flask.redirect('/admin/locations')
     return flask.render_template('admin/location-page-edit.html',
-                                form=form)
+                                form=form,
+                                submit_text="Create")
 
 @app.route('/admin/locations/<name>', methods=['GET', 'POST'])
 @flask_login.login_required
@@ -57,4 +58,5 @@ def admin_locations_edit(name):
         form.name.data = page.name
         form.description.data = page.description
     return flask.render_template('admin/location-page-edit.html',
-                                form=form)
+                                form=form,
+                                submit_text="Update")
