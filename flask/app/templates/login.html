@@ -1,0 +1,33 @@
+{% macro render_field(field, label_visible=true) -%}
+
+<div class="form-group {% if field.errors %}has-error{% endif %} {{ kwargs.pop('class_', '') }}">
+	{{ field(class_='form-control', **kwargs) }}
+	{% if field.errors %}
+	{% for e in field.errors %}
+	<p class="help-block">{{ e }}</p>
+	{% endfor %}
+	{% endif %}
+</div>
+{%- endmacro %}
+
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block body %}
+	<div class="form-container-outer">
+		<div class="form-container">
+			<div class="form-header">
+				<span>Administrator Login</span>
+			</div>
+			<form class="login-form" role="form" action="" method="post" name="login">
+				{{form.hidden_tag() }}
+				{% for error in form.errors.global %}
+				<p class="help-block">{{ error }}</p>
+				{% endfor %}
+				{{ render_field(form.email, placeholder='Email', type='email') }}
+				{{ render_field(form.password, placeholder='Password', type='password') }}
+				<p><input class="btn btn-primary" type="submit" value="Login" /></p>
+			</form>
+		</div>
+	</div>
+{% endblock %}
