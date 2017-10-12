@@ -13,6 +13,8 @@ db = SQLAlchemy(app)
 from views.api import *
 from views.templates import *
 
+from registration import views
+
 @app.cli.command()
 def initdb():
     db.create_all()
