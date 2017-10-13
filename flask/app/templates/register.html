@@ -7,19 +7,43 @@
     {% from "includes/_formhelpers.html" import render_field %}
     <form method="POST" action="">
       <div class="form-group">
-        {{render_field(form.name, class_="form-control")}}
+        {{render_field(form.educationalEstablishmentName, class_="form-control")}}
       </div>
       <div class="form-group">
-        {{render_field(form.email, class_="form-control")}}
+        {{render_field(form.registereeStreetAddress, class_="form-control")}}
       </div>
       <div class="form-group">
-        {{render_field(form.username, class_="form-control")}}
+        {{render_field(form.registereeCity, class_="form-control")}}
       </div>
       <div class="form-group">
-        {{render_field(form.password, class_="form-control")}}
+        {{render_field(form.registereePostcode, class_="form-control")}}
       </div>
       <div class="form-group">
-        {{render_field(form.confirm, class_="form-control")}}
+        {{render_field(form.registereeTelephoneNum, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.registereeMobileNum, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.courseNumber, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.courseTitle, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.isPrerequisiteMet, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.isEnrollmentUndergone, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.isFinalCoursePriorToGraduation, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.isFirstCourse, class_="form-control")}}
+      </div>
+      <div class="form-group">
+        {{render_field(form.isEligibleForFinance, class_="form-control")}}
       </div>
       <p><input type="submit" class="btn btn-primary" value="Submit"></p>
     </form>

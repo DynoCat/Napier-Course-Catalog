@@ -1,9 +1,18 @@
 from main import db
 
-class UserDetails(db.Model):
+class RegistrationDetails(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
-    email = db.Column(db.String(100))
-    username = db.Column(db.String(30))
-    password = db.Column(db.String(100))
-    #register_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    #userAccountID(db.Integer, db.ForeignKey())
+    educationalEstablishmentName = (db.String(150))
+    registereeStreetAddress = db.Column(db.String(150))
+    registereeCity = db.Column(db.String(100))
+    registereePostcode = db.Column(db.String(10))
+    registereeTelephoneNum = db.Column(db.Integer())
+    registereeMobileNum = db.Column(db.Integer())
+    courseNumber = db.Column(db.Integer())
+    courseTitle = db.Column(db.String(150))
+    isPrerequisiteMet = db.Column(db.Boolean, default=False, nullable=False)
+    isEnrollmentUndergone = db.Column(db.Boolean, default=False, nullable=False)
+    isFinalCoursePriorToGraduation = db.Column(db.Boolean, default=False, nullable=False)
+    isFirstCourse = db.Column(db.Boolean, default=False, nullable=False)
+    isEligibleForFinance = db.Column(db.Boolean, default=False, nullable=False)
